@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- DEBUG en com.intuit deja el request y el response completos en consola
+         y en el reporte HTML: es la evidencia que pide el examen -->
+    <logger name="com.intuit" level="DEBUG"/>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
